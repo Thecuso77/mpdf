@@ -167,9 +167,9 @@ trait FpdiTrait
 	 */
 	public function importPage($pageNumber, $box = PageBoundaries::CROP_BOX, $groupXObject = true)
 	{
-		$pageId = $this->fpdiImportPage($pageNumber, $box, $groupXObject);
+		$pageId = $this->fpdiImportPage($pageNumber, $box, $groupXObject, true);
 
-		$this->importedPages[$pageId]['externalLinks'] = $this->getImportedExternalPageLinks($pageNumber);
+// 		$this->importedPages[$pageId]['externalLinks'] = $this->getImportedExternalPageLinks($pageNumber);
 
 		return $pageId;
 	}
